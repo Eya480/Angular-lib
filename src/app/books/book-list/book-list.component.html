@@ -1,3 +1,7 @@
+<a
+  class="btn btn-success mb-3"
+  routerLink="/books/add"  
+  >Ajouter un livre</a>
 <table class="table table-striped">
     <thead>
       <tr class="table-dark">
@@ -17,8 +21,8 @@
           <td>{{book.title}}</td>
           <td>{{book.author}}</td>
           <td>{{book.price}}</td>
-          <td><button class="btn btn-primary" (click)="showEditForm(book)">Editer</button></td>
-          <td><button class="btn btn-danger" (click)="deleteBook(book.id)">Supprimer</button></td>
+          <td><button class="btn btn-primary">Editer</button></td>
+          <td><button class="btn btn-danger" >Supprimer</button></td>
         </tr>
       }
     </tbody>
