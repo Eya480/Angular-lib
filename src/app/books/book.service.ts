@@ -12,7 +12,16 @@ export class BookService {
 ]
   constructor() { }
   getBooks(){
-    return this.Books;
+    return [...this.Books]; //copie de tableau avec une ref differente
+  }
+  addBook(title : string , author : string , price : number){
+    const newBook = new Book (
+      this.Books[this.Books.length-1].id+1,
+      title,
+      author,
+      price
+    );
+    this.Books= [...this.Books,newBook];
   }
   
 }
